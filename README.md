@@ -50,7 +50,7 @@ Delete `%USERPROFILE%\.codex\pets\stella-materialism`, then restart Codex Deskto
 
 ## Package details
 
-The pet uses a Codex V1 custom-pet atlas: 1536×1872 pixels, arranged as an 8×9 grid of 192×208 cells. The repository contains only the runtime package and concise documentation; generation prompts, intermediate frames, QA media, and downloaded references are intentionally excluded.
+The pet uses a Codex V2 custom-pet atlas: 1536×2288 pixels, arranged as an 8×11 grid of 192×208 cells. The final two rows provide 16 clockwise look directions. The repository contains only the runtime package and concise documentation; generation prompts, intermediate frames, QA media, and downloaded references are intentionally excluded.
 
 ## About the artwork
 
