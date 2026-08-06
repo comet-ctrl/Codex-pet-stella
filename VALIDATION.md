@@ -3,15 +3,14 @@
 ## Target
 
 - Codex Desktop for Windows: `26.727.51351`
-- Active native Codex home: `C:\Users\freeb\.codex`
 - Package ID: `stella-materialism`
 - Package format: V1 custom-pet package
 
-V1 was selected for reliability on the installed Windows release. It uses the established 8×9 atlas and avoids the reported native-Windows V2 discovery issue.
+V1 was selected for reliability on the tested Windows release. It uses the established 8×9 atlas.
 
 ## Atlas validation
 
-- File: `run/stella-materialism/final/spritesheet.webp`
+- File: `package/stella-materialism/spritesheet.webp`
 - Encoding: WebP RGBA
 - Dimensions: 1536×1872
 - Grid: 8 columns × 9 rows
@@ -23,18 +22,18 @@ V1 was selected for reliability on the installed Windows release. It uses the es
 - Validator errors: 0
 - Atlas validator warnings: 0
 
-Frame extraction uses the Hatch Pet workflow's `stable-slots` mode. This was an intentional correction after the default component-fit extraction normalized every pose to the full cell height and suppressed the jump's vertical arc. The stable-slot review contains only the expected manual-review notices; the contact sheet and motion previews were subsequently inspected and accepted.
+Frame extraction used the Hatch Pet workflow's `stable-slots` mode. This preserved the jump's vertical arc while keeping every animation aligned to the runtime grid.
 
 ## Visual QA
 
-- Identity: consistent short mint/teal layered hair, crown goggles, lime outlined eyes, freckles, reflective silver coat, black choker, dark clothing, mechanical gloves and utility boots
-- Directional gait: right and left rows face correctly and alternate visibly
-- Jump: clear low–high–low arc with no shadow, dust or detached effects
-- Idle: subtle breath/blink loop
-- Waiting, failure, active-work and review states: visually distinct
-- Cropping, overlap, opaque backgrounds and guide marks: none observed
-- Final visual QA: pass; repair rows: none
+- Identity remains consistent across all animation rows.
+- Directional gait faces correctly and alternates visibly.
+- Jump follows a clear low–high–low arc with no shadow, dust, or detached effects.
+- Idle uses a subtle breath/blink loop.
+- Waiting, failure, active-work, and review states are visually distinct.
+- No cropping, overlap, opaque backgrounds, or guide marks were observed.
+- Final visual QA: pass; repair rows: none.
 
 ## Runtime package
 
-Only `pet.json` and `spritesheet.webp` belong in the installed custom-pet directory. Development references, prompts, contact sheets and previews remain in this project.
+Only `pet.json` and `spritesheet.webp` belong in the installed custom-pet directory. Development references, prompts, contact sheets, and previews are intentionally excluded from this repository.

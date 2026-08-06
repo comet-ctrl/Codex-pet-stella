@@ -2,27 +2,58 @@
 
 An unofficial, fan-made custom pet for Codex Desktop inspired by Stella from Studio Wrong's *Stella's Materialism*.
 
-This project creates an original compact 3D-anime interpretation of Stella for Codex's supported custom-pet system. It is a personal fan project and is not affiliated with, endorsed by, or sponsored by Studio Wrong.
+![Stella pet preview](preview.png)
 
-## Character cues
+## Install
 
-The pet preserves Stella's short layered mint hair, round green goggles worn on top of her head, oversized lime eyes, freckles, black choker and gloves, and reflective silver scientist coat. The artwork is newly generated fan art; no frames from Studio Wrong's videos are included in the package.
+### Option 1: PowerShell
 
-## Package
+1. Download this repository with **Code → Download ZIP**, then extract it. You can also clone it with Git:
 
-The runtime package contains:
+   ```powershell
+   git clone https://github.com/comet-ctrl/Codex-pet-stella.git
+   cd Codex-pet-stella
+   ```
 
-- `pet.json`
-- `spritesheet.webp`
+2. Copy the pet package into your Codex pets directory:
 
-It uses the Codex V1 custom-pet atlas: 1536×1872 pixels, arranged as an 8×9 grid of 192×208 cells.
+   ```powershell
+   $destination = Join-Path $env:USERPROFILE ".codex\pets\stella-materialism"
+   New-Item -ItemType Directory -Force -Path $destination
+   Copy-Item ".\package\stella-materialism\*" $destination -Force
+   ```
 
-Development references, QA contact sheets, animation previews, and validation results remain in this project rather than the installed runtime package.
+3. In Codex Desktop, open **Settings → Appearance → Pets**.
+4. Refresh custom pets if Stella is not listed, then select **Stella**.
 
-## Installation and selection
+### Option 2: Manual installation
 
-The finished package is installed under `%USERPROFILE%\.codex\pets\stella-materialism\`. In Codex Desktop, open **Settings → Appearance → Pets**, refresh custom pets if needed, then select **Stella**.
+Copy the entire [`package/stella-materialism`](package/stella-materialism) folder to:
 
-## Credits
+```text
+%USERPROFILE%\.codex\pets\stella-materialism
+```
 
-See [CREDITS.md](CREDITS.md) for source links and the fan-project notice.
+The installed folder must contain both files directly:
+
+```text
+stella-materialism/
+├── pet.json
+└── spritesheet.webp
+```
+
+Restart Codex Desktop or refresh custom pets if the pet does not appear immediately.
+
+## Uninstall
+
+Delete `%USERPROFILE%\.codex\pets\stella-materialism`, then restart Codex Desktop.
+
+## Package details
+
+The pet uses a Codex V1 custom-pet atlas: 1536×1872 pixels, arranged as an 8×9 grid of 192×208 cells. The repository contains only the runtime package and concise documentation; generation prompts, intermediate frames, QA media, and downloaded references are intentionally excluded.
+
+## About the artwork
+
+This project contains newly generated fan art and does not redistribute frames from Studio Wrong's videos. It is not affiliated with, endorsed by, or sponsored by Studio Wrong.
+
+See [CREDITS.md](CREDITS.md) for source links and the fan-project notice. Technical validation notes are available in [VALIDATION.md](VALIDATION.md).

@@ -1,6 +1,6 @@
 # Credits and source links
 
-Stella and *Stella's Materialism* were created by Studio Wrong. This repository contains unofficial original fan art made for personal use as a Codex Desktop custom pet. It does not imply affiliation with or endorsement by Studio Wrong.
+Stella and *Stella's Materialism* were created by Studio Wrong. This repository contains unofficial original fan art made for personal use. It does not imply affiliation with or endorsement by Studio Wrong.
 
 Official references used to understand Stella's appearance:
 
