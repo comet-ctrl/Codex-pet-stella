@@ -25,6 +25,33 @@ No coding or terminal commands needed. Keep both files together:
 
 Already have Stella installed? Back up the existing `stella-materialism` folder before replacing it.
 
+### Install with Git and PowerShell
+
+Already have Git installed? Open **PowerShell** in the folder where you want to keep the download:
+
+```powershell
+git clone https://github.com/comet-ctrl/Codex-pet-stella.git
+cd Codex-pet-stella
+```
+
+Then copy the pet into the desktop app's pets folder. If Stella is already installed, back up her existing folder first; this replaces the two pet files.
+
+```powershell
+$petFolder = Join-Path $env:USERPROFILE ".codex\pets\stella-materialism"
+New-Item -ItemType Directory -Force -Path $petFolder | Out-Null
+Copy-Item -LiteralPath ".\package\stella-materialism\pet.json", ".\package\stella-materialism\spritesheet.webp" -Destination $petFolder -Force
+```
+
+Open **Pets** settings in the desktop app, refresh if available, and select **Stella**. Restart the app if she does not appear.
+
+**To update later:** open PowerShell inside your `Codex-pet-stella` download folder and run:
+
+```powershell
+git pull --ff-only
+```
+
+Then run the copy commands above again and restart the app. Pulling updates the download; copying updates the installed pet.
+
 ## What does she look like?
 
 The portrait above shows Stella's design. This sheet shows the actual animation frames and different look directions included in your download:
