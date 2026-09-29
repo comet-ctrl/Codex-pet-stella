@@ -1,59 +1,48 @@
-# Stella — Codex Desktop Pet
+# Stella — a custom desktop pet
 
-An unofficial, fan-made custom pet for Codex Desktop inspired by Stella from Studio Wrong's *Stella's Materialism*.
+A little animated companion for your Codex desktop app. Stella has mint-green hair, goggles, and a silver coat, with different poses for working, waiting, and reacting.
 
-![Stella pet preview](preview.png)
+<p align="center">
+  <img src="preview.png" alt="Stella with mint-green hair, goggles, and a silver coat" width="192" height="208">
+</p>
 
-## Install
+**[Download Stella](https://github.com/comet-ctrl/Codex-pet-stella/archive/refs/heads/main.zip)** · [Artwork credits](CREDITS.md)
 
-### Option 1: PowerShell
+## Install on Windows
 
-1. Download this repository with **Code → Download ZIP**, then extract it. You can also clone it with Git:
+1. **Download and unzip** the file above.
+2. Open the extracted folder, then open **`package`**. Copy the **`stella-materialism`** folder.
+3. Open File Explorer and paste **`%USERPROFILE%\.codex\pets`** into the address bar. If the `pets` folder does not exist, create it inside `%USERPROFILE%\.codex`. Paste the copied folder there.
+4. Open your desktop app's **Pets** settings, refresh the list if available, and choose **Stella**. Restart the app if she does not appear.
 
-   ```powershell
-   git clone https://github.com/comet-ctrl/Codex-pet-stella.git
-   cd Codex-pet-stella
-   ```
-
-2. Copy the pet package into your Codex pets directory:
-
-   ```powershell
-   $destination = Join-Path $env:USERPROFILE ".codex\pets\stella-materialism"
-   New-Item -ItemType Directory -Force -Path $destination
-   Copy-Item ".\package\stella-materialism\*" $destination -Force
-   ```
-
-3. In Codex Desktop, open **Settings → Appearance → Pets**.
-4. Refresh custom pets if Stella is not listed, then select **Stella**.
-
-### Option 2: Manual installation
-
-Copy the entire [`package/stella-materialism`](package/stella-materialism) folder to:
+No coding or terminal commands needed. Keep both files together:
 
 ```text
-%USERPROFILE%\.codex\pets\stella-materialism
-```
-
-The installed folder must contain both files directly:
-
-```text
-stella-materialism/
+.codex/pets/stella-materialism/
 ├── pet.json
 └── spritesheet.webp
 ```
 
-Restart Codex Desktop or refresh custom pets if the pet does not appear immediately.
+Already have Stella installed? Back up the existing `stella-materialism` folder before replacing it.
 
-## Uninstall
+## What does she look like?
 
-Delete `%USERPROFILE%\.codex\pets\stella-materialism`, then restart Codex Desktop.
+The portrait above shows Stella's design. This sheet shows the actual animation frames and different look directions included in your download:
 
-## Package details
+<p align="center">
+  <img src="package/stella-materialism/spritesheet.webp" alt="Stella's included animation frames and sixteen directional poses" width="768">
+</p>
 
-The pet uses a Codex V2 custom-pet atlas: 1536×2288 pixels, arranged as an 8×11 grid of 192×208 cells. The final two rows provide 16 clockwise look directions. The repository contains only the runtime package and concise documentation; generation prompts, intermediate frames, QA media, and downloaded references are intentionally excluded.
+## Compatibility
 
-## About the artwork
+This package is for the desktop app's **V2 custom pets**. It was validated for Codex Desktop on Windows `26.727.51351`. The files have also been installed and checked on `26.924.2738.0`, but appearance and animation in that version still need manual verification. Menu names may vary by version.
 
-This project contains newly generated fan art and does not redistribute frames from Studio Wrong's videos. It is not affiliated with, endorsed by, or sponsored by Studio Wrong.
+This is not a standalone desktop app or a ChatGPT web pet upload. See [validation details](VALIDATION.md).
 
-See [CREDITS.md](CREDITS.md) for source links and the fan-project notice. Technical validation notes are available in [VALIDATION.md](VALIDATION.md).
+## Remove Stella
+
+Choose another pet, then delete only the `stella-materialism` folder from `.codex/pets`. Restart the app if needed.
+
+## Credits
+
+Unofficial fan-made artwork inspired by Stella from Studio Wrong's *Stella's Materialism*. Not affiliated with or endorsed by Studio Wrong. [Artwork credits and source links →](CREDITS.md)
